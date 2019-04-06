@@ -5,7 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DropDownComponent } from './custom-dropdown/dropdown.component';
 import { ClickOutsideModule } from './click-outside/clickOutside.module';
-import { ClickOutsideDirective } from './click-outside/clickOutside.directive';
+import { ClickEscapeModule } from './click-escape/click-escape.module';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,6 +17,7 @@ import { ClickOutsideDirective } from './click-outside/clickOutside.directive';
     BrowserModule,
     AppRoutingModule,
     ClickOutsideModule,
+    ClickEscapeModule,
     
   ],
   providers: [],
