@@ -8,16 +8,16 @@ import { DropDownValue } from './dropdown.interface';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class DropDownComponent implements OnInit {
-  @Input() 
+  @Input()
   public dropDownValues: Array<DropDownValue>;
   @Input()
-  public defaultValue: DropDownValue = {title: "Please Select a value"}; // Default value 
+  public defaultValue: DropDownValue = {title: 'Please Select a value'}; // Default value 
 
   public dropDownOpened: boolean = false;
   public selectedValue: DropDownValue ;
   public focussedItem: number = -1;
 
-  constructor(){
+  constructor() {
 
   }
 /**
@@ -39,8 +39,8 @@ export class DropDownComponent implements OnInit {
     this.dropDownOpened = false;
   }
 /**
- * Set the selected value of the dro down
- * @param selected {DropdownValue} selected value
+ * Set the selected value of the drop down
+ * @param selected selected value of the dropdown
  */
   public setSelectedValue(selected: DropDownValue): void {
     this.selectedValue = selected;
@@ -51,10 +51,12 @@ export class DropDownComponent implements OnInit {
  * @param event {KeyboardEvent} event
  */
   public arrowMovement(event: KeyboardEvent): void {
-    if (event.key === "ArrowUp" && this.focussedItem > 0) {
+    
+    if (event.key === 'ArrowUp' && this.focussedItem > 0) {
         this.focussedItem--;
     }
-    if (event.key === "ArrowDown" && this.focussedItem < this.dropDownValues.length-1) {
+
+    if (event.key === 'ArrowDown' && this.focussedItem < this.dropDownValues.length - 1) {
       this.focussedItem++;
     }
   }
