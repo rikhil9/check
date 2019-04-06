@@ -3,16 +3,20 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { DropDownComponent } from './custom-dropdown/dropdown.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DropDownComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    
   ],
   providers: [],
-  bootstrap: [AppComponent]
+
+bootstrap: [AppComponent]
 })
 export class AppModule { }

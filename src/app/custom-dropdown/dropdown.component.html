@@ -1,0 +1,7 @@
+
+<div class="select-field" (click)="toggleDropDown()">{{selectedValue}}</div>
+<ng-container *ngIf="dropDownOpened">
+    <ul *ngFor="let name of dropDownValues">
+        <li (click)="setSelectedValue(name.title)">{{name.title}}</li>
+    </ul>
+</ng-container>
