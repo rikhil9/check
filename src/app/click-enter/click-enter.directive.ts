@@ -1,5 +1,7 @@
 import {Directive, Output, EventEmitter, HostListener} from '@angular/core';
-
+/**
+ * Directive to listen Keypress enter
+ */
 @Directive({
     selector: '[clickEnter]'
 })

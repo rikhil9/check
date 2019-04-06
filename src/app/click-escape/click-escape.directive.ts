@@ -1,5 +1,7 @@
 import {Directive, Output, EventEmitter, HostListener} from '@angular/core';
-
+/**
+ * Escape keypress listener
+ */
 @Directive({
     selector: '[clickEscape]'
 })

@@ -1,6 +1,8 @@
 import { Component, OnInit, Input, ChangeDetectionStrategy, Output, EventEmitter, HostListener } from '@angular/core';
 import { DropDownValue } from './dropdown.interface';
-
+/**
+ * Custom dropdown
+ */
 @Component({
   selector: 'dropdown-select',
   templateUrl: './dropdown.component.html',
@@ -77,7 +79,6 @@ public openDropDown(): void {
   public enterPressed() {
     this.setSelectedValue(this.dropDownValues[this.focussedItem]);
     this.closeDropDown();
-    // this.focussedItem = -1; highlight will remain on the selected item
   }
 
 }
