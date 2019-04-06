@@ -8,5 +8,13 @@
 <h2>Here are some links to help you start: </h2>
 
 <dropdown-select [dropDownValues]='[{title: "Riyom"}, {title: "Priyanka"}]'></dropdown-select>
+<br>
+
+<dropdown-select [dropDownValues]='[{title: "Riyom", subTitle: "8months"}, {title: "Priyanka", subTitle: "27 Years"}]'></dropdown-select>
+
+<br>
+
+<dropdown-select [defaultValue]='{title: "Riyom", subTitle: "8months"}' [dropDownValues]='[{title: "Riyom", subTitle: "8months"}, 
+{title: "Priyanka", subTitle: "27 Years"},{title: "Rikhil", subTitle: "27 Years"} ]'></dropdown-select>
 
 <router-outlet></router-outlet>

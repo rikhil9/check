@@ -1,4 +1,8 @@
 .select-field{
     border: 1px solid black;
     width: 200px;
+
+    &__subtitle {
+        text-align: right;
+    }
 }
