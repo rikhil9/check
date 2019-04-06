@@ -1,5 +1,4 @@
-
-<div class="select-field" (click)="toggleDropDown()" (clickOutside)="closeDropDown()">{{selectedValue.title}} 
+<div class="select-field" (click)="toggleDropDown()" (clickOutside)="closeDropDown()" (keydown.arrowdown)="openDropDown()" tabindex=0>{{selectedValue.title}} 
     <i *ngIf=selectedValue.subTitle class="select-field__subtitle">{{selectedValue.subTitle}}</i>
 </div>
 <ul *ngIf="dropDownOpened" class="show-border list" (clickEscape)="closeDropDown()" (arrowPressed)="arrowMovement($event)" (clickEnter)="enterPressed()">

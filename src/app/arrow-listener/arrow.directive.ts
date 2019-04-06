@@ -4,12 +4,9 @@ import {Directive, Output, EventEmitter, HostListener} from '@angular/core';
     selector: '[arrowPressed]'
 })
 export class ArrowDirective {
-    constructor() {
-    }
 
     @Output()
     public arrowPressed = new EventEmitter<KeyboardEvent>();
-
 
     @HostListener('document:keydown.ArrowDown', ['$event'])
     @HostListener('document:keydown.ArrowUp', ['$event'])

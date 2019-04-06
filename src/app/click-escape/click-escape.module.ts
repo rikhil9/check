@@ -1,6 +1,5 @@
     
 import { NgModule } from '@angular/core';
-
 import { ClickEscapeDirective } from './click-escape.directive';
 
 @NgModule({

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, ChangeDetectionStrategy } from '@angular/core';
+import { Component, OnInit, Input, ChangeDetectionStrategy, Output, EventEmitter, HostListener } from '@angular/core';
 import { DropDownValue } from './dropdown.interface';
 
 @Component({
@@ -32,12 +32,23 @@ export class DropDownComponent implements OnInit {
   public toggleDropDown(): void {
     this.dropDownOpened = !this.dropDownOpened
   }
-/**
+
+  /**
  * Forcefully closes the dropdown
  */
   public closeDropDown(): void {
     this.dropDownOpened = false;
   }
+
+  /**
+ * Forcefully opens the dropdown
+ */
+public openDropDown(): void {
+    this.dropDownOpened = true;
+}
+
+ 
+
 /**
  * Set the selected value of the drop down
  * @param selected selected value of the dropdown

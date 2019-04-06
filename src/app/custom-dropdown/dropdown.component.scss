@@ -7,6 +7,9 @@ $dropdown-width: 200px;
     &__subtitle {
         float: right;
     }
+    &:focus {
+        border: 1px solid blue;
+    }
 }
 
 .show-border {
