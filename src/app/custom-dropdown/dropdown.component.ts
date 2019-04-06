@@ -15,6 +15,7 @@ export class DropDownComponent implements OnInit {
 
   public dropDownOpened: boolean = false;
   public selectedValue: DropDownValue ;
+
 /**
  * On init Lifecycle event
  */
