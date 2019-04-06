@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, ChangeDetectionStrategy, OnChanges, ChangeDetectorRef } from '@angular/core';
+import { Component, OnInit, Input, ChangeDetectionStrategy } from '@angular/core';
 import { DropDownValue } from './dropdown.interface';
 
 @Component({
@@ -15,7 +15,11 @@ export class DropDownComponent implements OnInit {
 
   public dropDownOpened: boolean = false;
   public selectedValue: DropDownValue ;
+  public focussedItem: number = -1;
 
+  constructor(){
+
+  }
 /**
  * On init Lifecycle event
  */
@@ -47,7 +51,20 @@ export class DropDownComponent implements OnInit {
  * @param event {KeyboardEvent} event
  */
   public arrowMovement(event: KeyboardEvent): void {
-    //TODO
+    if (event.key === "ArrowUp" && this.focussedItem > 0) {
+        this.focussedItem--;
+    }
+    if (event.key === "ArrowDown" && this.focussedItem < this.dropDownValues.length-1) {
+      this.focussedItem++;
+    }
+  }
+/**
+ * Select the focussed item on press of enter
+ */
+  public enterPressed() {
+    this.setSelectedValue(this.dropDownValues[this.focussedItem]);
+    this.closeDropDown();
+    // this.focussedItem = -1; highlight will remain on the selected item
   }
 
 }

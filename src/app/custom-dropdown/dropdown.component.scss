@@ -16,8 +16,8 @@ $dropdown-width: 200px;
     width: $dropdown-width;
     .list__item {
         list-style-type: none;
-        &::focus {
-            background-color: yellow;
+        &.active{
+            background-color: lightblue;
         }
     }
     .list__subtitle {

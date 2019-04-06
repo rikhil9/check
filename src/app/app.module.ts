@@ -7,6 +7,7 @@ import { ClickOutsideModule } from './click-outside/clickOutside.module';
 import { ClickEscapeModule } from './click-escape/click-escape.module';
 import { DropDownComponent } from './custom-dropdown/dropdown.component';
 import { ArrowModule } from './arrow-listener/arrow.module';
+import { ClickEnterModule } from './click-enter/click-escape.module';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { ArrowModule } from './arrow-listener/arrow.module';
     ArrowModule,
     ClickOutsideModule,
     ClickEscapeModule,
+    ClickEnterModule,
     
   ],
   providers: [],
