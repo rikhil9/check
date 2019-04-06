@@ -48,8 +48,6 @@ export class DropDownComponent implements OnInit {
  */
   public arrowMovement(event: KeyboardEvent): void {
     //TODO
-    console.log("moving");
-
   }
 
 }
