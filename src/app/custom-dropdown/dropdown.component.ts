@@ -15,23 +15,27 @@ export class DropDownComponent implements OnInit {
   public defaultValue: DropDownValue;
   public selectedValue: DropDownValue = {title: "Please Select a value"};
 
-  public ngOnInit() {
+  public ngOnInit(): void {
     if( this.defaultValue ){
       this.selectedValue = this.defaultValue;
     }
   }
 
-  public toggleDropDown() {
+  public toggleDropDown(): void {
     this.dropDownOpened = !this.dropDownOpened
   }
 
-  public closeDropDown() {
+  public closeDropDown(): void {
     this.dropDownOpened = false;
   }
 
-  public setSelectedValue(selected: DropDownValue) {
+  public setSelectedValue(selected: DropDownValue): void {
     this.selectedValue = selected;
     this.toggleDropDown();
+  }
+
+  public arrowMovement(event: KeyboardEvent): void {
+    console.log("moving")
   }
 
 }
