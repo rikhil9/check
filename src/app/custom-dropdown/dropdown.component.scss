@@ -1,11 +1,11 @@
 $dropdown-width: 200px;
 
-.select-field{
+.select-field {
     border: 1px solid black;
     width: $dropdown-width;
 
     &__subtitle {
-        text-align: right;
+        float: right;
     }
 }
 
@@ -14,7 +14,10 @@ $dropdown-width: 200px;
     margin: 0px;
     padding-left: 0;
     width: $dropdown-width;
-    li {
+    .list__item {
         list-style-type: none;
+    }
+    .list__subtitle {
+        float: right;
     }
 }
