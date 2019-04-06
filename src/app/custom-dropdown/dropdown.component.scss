@@ -1,8 +1,20 @@
+$dropdown-width: 200px;
+
 .select-field{
     border: 1px solid black;
-    width: 200px;
+    width: $dropdown-width;
 
     &__subtitle {
         text-align: right;
+    }
+}
+
+.show-border {
+    border: 1px solid black;
+    margin: 0px;
+    padding-left: 0;
+    width: $dropdown-width;
+    li {
+        list-style-type: none;
     }
 }
