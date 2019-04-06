@@ -1,8 +1,8 @@
 
-<div class="select-field" (click)="toggleDropDown()">{{selectedValue.title}}
+<div class="select-field" (click)="toggleDropDown()" (clickOutside)="closeDropDown()">{{selectedValue.title}}
     <i *ngIf=selectedValue.subTitle class="select-field__subtitle">{{selectedValue.subTitle}}</i>
 </div>
-<ng-container *ngIf="dropDownOpened">
+<ng-container *ngIf="dropDownOpened" >
     <ul *ngFor="let name of dropDownValues">
         <li (click)="setSelectedValue(name)">{{name.title}} <i *ngIf=name.subTitle>{{name.subTitle}}</i></li>
     </ul>

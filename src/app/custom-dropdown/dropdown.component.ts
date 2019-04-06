@@ -25,6 +25,10 @@ export class DropDownComponent implements OnInit {
     this.dropDownOpened = !this.dropDownOpened
   }
 
+  public closeDropDown() {
+    this.dropDownOpened = false;
+  }
+
   public setSelectedValue(selected: DropDownValue) {
     this.selectedValue = selected;
     this.toggleDropDown();
